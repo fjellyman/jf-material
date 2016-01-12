@@ -1,0 +1,22 @@
+{
+  "name": "jf-material",
+  "description": "Google's Material Design templates from specs",
+  "main": "dist/style.css",
+  "authors": [
+    "Jordan Fjellman <jordan.fjellman@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/fjellyman/jf-material",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "jquery": "~2.2.0"
+  }
+}

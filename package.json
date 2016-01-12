@@ -1,0 +1,27 @@
+{
+  "name": "jf-material",
+  "version": "1.0.0",
+  "description": "Google's Material Design templates from specs",
+  "main": "dist/style.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fjellyman/jf-material.git"
+  },
+  "author": "Jordan Fjellman <jordan.fjellman@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fjellyman/jf-material/issues"
+  },
+  "homepage": "https://github.com/fjellyman/jf-material#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "csswring": "^4.1.1",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^6.0.1",
+    "postcss": "^5.0.14",
+    "postcss-cssnext": "^2.4.0"
+  }
+}
