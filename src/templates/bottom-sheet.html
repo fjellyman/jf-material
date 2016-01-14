@@ -1,26 +1,33 @@
 <html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./Style.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
-out of bottom sheet
-<!-- <div class="bottom-sheet list">
-<div class="title">Create</div>
-<div class="row">
-  <div class="icon"><i class="material-icons">folder</i></div>
-  <div class="label">Folder</div>
-</div>
-<div class="row">
-  <div class="icon"><i class="material-icons">share</i></div>
-  <div class="label">Share</div>
-</div> -->
-<div class="bottom-sheet grid">
-  
-</div>
-</div>
-</body>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="../../build/style.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <span class="bottom-sheet-show" name="bottom-sheet-1">Testing</span>
+        <div id="bottom-sheet-1" class="bottom-sheet list hide">
+            <div class="title">Create</div>
+            <div class="row">
+                <div class="icon"><i class="material-icons">mail</i></div>
+                <div class="label">Gmail</div>
+            </div>
+            <div class="row">
+                <div class="icon"><i class="material-icons">share</i></div>
+                <div class="label">Share</div>
+            </div>
+            <!--
+            <div class="bottom-sheet grid"></div>
+            -->
+        </div>
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="../scripts/close-modal.js"></script>
+    </body>
+
 </html>

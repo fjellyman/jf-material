@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var csswring = require('csswring');
 var cssnext = require('postcss-cssnext');
+var csswring = require('csswring');
 
 gulp.task('styles', function() {
 	var processors = [
