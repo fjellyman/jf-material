@@ -1,56 +1,54 @@
-(function (window, $) {
+(function(window, $) {
+    'use strict';
 
-  $(function() {
-    $('.button').on('click', function (event) {
-      event.preventDefault();
+    var rippleSelector = '.button, .menu li';
 
-      var $div = $('<div/>'),
-          btnOffset = $(this).offset(),
-      		xPos = event.pageX - btnOffset.left,
-      		yPos = event.pageY - btnOffset.top;
+    $(rippleSelector).on('click', function(event) {
+        var $div = $('<div/>'),
+            btnOffset = $(this).offset(),
+            xPos = event.pageX - btnOffset.left,
+            yPos = event.pageY - btnOffset.top;
 
-      $div.addClass('ripple-effect');
-      var $ripple = $(".ripple-effect");
+        $div.addClass('ripple-effect');
 
-      $ripple.css("height", $(this).height());
-      $ripple.css("width", $(this).height());
+        var $ripple = $('.ripple-effect');
 
-      $div
-        .css({
-          top: yPos - ($ripple.height()/2),
-          left: xPos - ($ripple.width()/2)
-        })
-        .appendTo($(this));
+        var color = {
+            primary: '#0062b4',
+            accent: '#ffa726',
+            grey: '#bdbdbd',
+            white: '#ffffff'
+        };
 
-      if ($(this).hasClass('button-flat') && $(this).hasClass('button-default')) {
-        $div
-          .css({
-            background: '#e0e0e0'
-          })
-          .appendTo($(this));
-      }
+        var backgroundColor = color.white;
 
-      if ($(this).hasClass('button-flat') && $(this).hasClass('button-primary')) {
-        $div
-          .css({
-            background: '#005195'
-          })
-          .appendTo($(this));
-      }
+        if ($(this).is('li')) {
+          backgroundColor = color.primary;
+        }
 
-      if ($(this).hasClass('button-flat') && $(this).hasClass('button-accent')) {
-        $div
-          .css({
-            background: '#ff9800'
-          })
-          .appendTo($(this));
-      }
+        if ($(this).hasClass('button-flat')) {
+          if ($(this).hasClass('button-primary')){
+            backgroundColor = color.primary;
+          }
+          if ($(this).hasClass('button-accent')){
+            backgroundColor = color.accent;
+          }
+          if ($(this).hasClass('button-default')){
+            backgroundColor = color.grey;
+          }
+        }
 
-      window.setTimeout(function(){
-        $div.remove();
-      }, 2000);
-    }).is('button-primary', function () {
-      console.log('is button-primary');
+        $ripple.css('height', $(this).height());
+        $ripple.css('width', $(this).height());
+        $div.css({
+                top: yPos - ($ripple.height() / 2),
+                left: xPos - ($ripple.width() / 2),
+                background: backgroundColor
+            })
+            .appendTo($(this));
+
+        window.setTimeout(function() {
+            $div.remove();
+        }, 2000);
     });
-  });
 })(window, jQuery);

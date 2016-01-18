@@ -1,0 +1,3 @@
+(fuction($) {
+    'use strict';
+})(jQuery);
