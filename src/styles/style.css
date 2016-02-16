@@ -794,3 +794,19 @@ nav.app-bar > nav @media (--mobile-viewport) {
         height: 56px;
     }
 }
+
+/* Layout */
+.top-bar{
+  background: blue;
+  height: 100px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.content{
+  background: red;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
